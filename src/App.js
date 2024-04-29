@@ -24,7 +24,7 @@ function App() {
   const [isTokenExpired, setIsTokenExpired] = useState(false);
   const [token, setToken] = useState(localStorage.getItem("token"));
   const navigate = useNavigate();
-  axios.defaults.baseURL = "http://192.168.1.2:5000";
+  axios.defaults.baseURL = "https://marwa-server.onrender.com";
 
   const handleLogout = (log) => {
     // Perform logout actions here
@@ -131,7 +131,7 @@ function App() {
   }
   return (
     <div className="App">
-      {/* {SignupIsOpen ? (
+      {SignupIsOpen ? (
         <Signup
           setSignupIsOpen={setSignupIsOpen}
           LoginClose={LoginClose}
@@ -188,8 +188,8 @@ function App() {
         />
         <Route path="/signup" element={<SignUpForm />} />
         <Route path="/hardware-Acceleration" element={<OperaEffectHandle />} />
-      </Routes> */}
-      <Demo/>
+      </Routes>
+      {/* <Demo/> */}
     </div>
   );
 }
