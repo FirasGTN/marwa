@@ -1,0 +1,81 @@
+.login {
+  height: calc(100vh - 80px);
+  z-index: 10;
+  overscroll-behavior: contain;
+  backdrop-filter: blur(30px);
+  -webkit-backdrop-filter: blur(30px);
+  background-color: rgba(71, 71, 71, 0.404);
+  animation: accountMount 0.5s forwards ease-in-out;
+  display: grid;
+  grid-template-columns: repeat(8, 1fr);
+  grid-template-rows: repeat(7, 1fr);
+  grid-column-gap: 0px;
+  grid-row-gap: 0px;
+}
+
+.login-unmount {
+  animation: accountunMount 0.5s ease-in-out forwards;
+}
+
+@media (max-width: 640px) {
+  .login-div {
+    grid-area: 2 / 1 / 7 / 9;
+  }
+  .login {
+    padding: 20px;
+  }
+}
+
+@media (min-width: 640px) {
+  .login-div {
+    grid-area: 2 / 2 / 7 / 8;
+  }
+}
+
+@media (min-width: 1280px) {
+  .login-div {
+    grid-area: 2 / 3 / 7 / 7;
+  }
+}
+
+.form-login {
+  /* box-shadow: 14px 10px 66px -1px rgba(0, 0, 0, 0.55);
+  -moz-box-shadow: 14px 10px 66px -12px rgba(0, 0, 0, 0.55); */
+  -webkit-box-shadow: 14px 15px 66px -12px rgba(0, 0, 0, 0.55);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  border-radius: 10px;
+}
+
+@-webkit-keyframes accountunMount {
+  0% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+@keyframes accountunMount {
+  0% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+@-webkit-keyframes accountMount {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+@keyframes accountMount {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
